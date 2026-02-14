@@ -110,6 +110,66 @@
             border-radius: 5px;
             text-align: center;
         }
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 20% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            animation: slideDown 0.3s ease-out;
+        }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .modal-content h2 {
+            color: #27ae60;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        .modal-content p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .modal-content .checkmark {
+            font-size: 60px;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+        .modal-button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .modal-button:hover {
+            background: #1a252f;
+        }
         @media (max-width: 600px) {
             .phone {
                 font-size: 24px;
@@ -185,7 +245,7 @@
         <div class="section" style="text-align: center;">
             <h2>🚛 Наша техника</h2>
             <div style="background: #ddd; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #666;">
-                ФОТО машины
+                [ЗДЕСЬ БУДЕТ ФОТО ВАШЕЙ МАШИНЫ]
             </div>
             <p style="margin-top: 10px;">Иномарка / ГАЗ-3307 / Емкость 4 м³</p>
         </div>
@@ -193,7 +253,7 @@
         <!-- Зоны выезда -->
         <div class="section">
             <h2>📍 Районы выезда</h2>
-            <p>Работаем по всему Владимиру и области:</p>
+            <p>Работаем по всему Владимиру и пригороду:</p>
             <div class="district-list">
                 <div class="district-item">Юрьевец</div>
                 <div class="district-item">Доброе</div>
@@ -204,13 +264,12 @@
                 <div class="district-item">Улыбышево</div>
                 <div class="district-item">Суходол</div>
                 <div class="district-item">Спасское</div>
-                <div class="district-item">Сновицы</div>
             </div>
         </div>
 
         <!-- Кнопка звонка -->
         <div style="text-align: center;">
-            <a href="tel:+79157748782" class="button">📞 ПОЗВОНИТЬ СЕЙЧАС</a>
+            <a href="tel:+79991234567" class="button">📞 ПОЗВОНИТЬ СЕЙЧАС</a>
         </div>
 
         <!-- Контакты и форма -->
@@ -221,9 +280,15 @@
             <p><strong>Режим работы:</strong> Круглосуточно, без выходных</p>
             
             <h3 style="margin-top: 20px;">Быстрая заявка</h3>
-            <form action="https://formsubmit.co/smouk3214@gmail.com" method= "POST">
-                <input type="text" placeholder="Ваше имя" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                <input type="tel" placeholder="Ваш телефон" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            
+            <!-- ИЗМЕНЕНО: Добавлен data-атрибут для отслеживания отправки -->
+            <form id="contactForm" action="https://formsubmit.co/smouk3214@gmail.com" method="POST" style="margin-top: 15px;">
+                <input type="text" name="name" placeholder="Ваше имя" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;" required>
+                <input type="tel" name="phone" placeholder="Ваш телефон" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;" required>
+                
+                <!-- ДОБАВЛЕНО: Скрытое поле для редиректа -->
+                <input type="hidden" name="_next" value="https://smouk3214-gif.github.io/Assen/?success=true"> 
+                
                 <button type="submit" style="background: #2c3e50; color: white; padding: 15px; border: none; border-radius: 5px; width: 100%; font-size: 16px; cursor: pointer;">Отправить заявку</button>
             </form>
             <p style="font-size: 12px; color: #999; margin-top: 10px;">Нажимая кнопку, вы соглашаетесь на обработку данных</p>
@@ -233,8 +298,47 @@
     <div class="footer">
         <div class="container">
             <p>© 2026 Ассенизатор во Владимире</p>
-            <p style="font-size: 14px; margin-top: 10px;">ИП Овчинников В.А. | ОГРН 1234567890123</p>
+            <p style="font-size: 14px; margin-top: 10px;">ИП Овчинников И.И. | ОГРН 1234567890123</p>
         </div>
     </div>
+
+    <!-- ДОБАВЛЕНО: Модальное окно -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="checkmark">✅</div>
+            <h2>Спасибо!</h2>
+            <p>Ваша заявка принята. Мы перезвоним вам в ближайшее время.</p>
+            <button class="modal-button" onclick="closeModal()">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- ДОБАВЛЕНО: JavaScript для модального окна -->
+    <script>
+        // Показываем модальное окно при загрузке страницы, если есть параметр success=true
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('success') && urlParams.get('success') === 'true') {
+                showModal();
+                // Убираем параметр из URL, чтобы при обновлении страницы окно не появлялось снова
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        });
+
+        function showModal() {
+            document.getElementById('successModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        // Закрытие по клику вне модального окна
+        window.onclick = function(event) {
+            const modal = document.getElementById('successModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
