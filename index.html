@@ -3,114 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ассенизатор во Владимире | Круглосуточно</title>
+    
+    <!-- Основные SEO мета-теги -->
+    <title>Ассенизатор во Владимире 🚛 Круглосуточно | Низкие цены</title>
+    <meta name="description" content="Ассенизатор во Владимире и области. Откачка септика от 1500₽, выгребных ям, туалетов. Круглосуточно, быстро, официальный слив. Звоните!">
+    <meta name="keywords" content="ассенизатор владимир, откачка септика владимир, откачка выгребной ямы, ассенизатор круглосуточно, выкачка туалета">
+    <meta name="author" content="Ассенизатор во Владимире">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (для соцсетей) -->
+    <meta property="og:title" content="Ассенизатор во Владимире | Круглосуточно">
+    <meta property="og:description" content="Откачка септика от 1500₽. Быстро, легально, с гарантией.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://вашлогин.github.io">
+    <meta property="og:image" content="https://вашлогин.github.io/images/assennik-preview.jpg">
+    
+    <!-- Гео-метки для локального SEO -->
+    <meta name="geo.region" content="RU-VLA">
+    <meta name="geo.placename" content="Владимир">
+    <meta name="geo.position" content="56.129057;40.406635">
+    <meta name="ICBM" content="56.129057, 40.406635">
+    
+    <!-- Yandex Verification (получите код в Яндекс.Вебмастер) -->
+    <meta name="yandex-verification" content="ЗДЕСЬ_КОД_ОТ_ЯНДЕКСА">
+    
+    <!-- Google Verification (получите код в Google Search Console) -->
+    <meta name="google-site-verification" content="ЗДЕСЬ_КОД_ОТ_GOOGLE" />
+    
+    <!-- Favicon (добавьте свою иконку) -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Микроразметка Schema.org для организаций -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Ассенизатор во Владимире",
+        "image": "https://вашлогин.github.io/images/assennik.jpg",
+        "description": "Профессиональные услуги ассенизатора во Владимире и области",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Владимир",
+            "addressRegion": "Владимирская область",
+            "addressCountry": "RU"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "56.129057",
+            "longitude": "40.406635"
+        },
+        "url": "https://вашлогин.github.io",
+        "telephone": "+7-999-123-45-67",
+        "priceRange": "1500-5000₽",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": "00:00",
+                "closes": "23:59"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Микроразметка для услуг -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Услуги ассенизатора",
+        "description": "Откачка септиков, выгребных ям, туалетов",
+        "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "1500",
+            "highPrice": "5000",
+            "priceCurrency": "RUB",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    
     <style>
+        /* CSS переменные для легкой настройки */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #27ae60;
+            --accent: #ffd700;
+            --text: #333;
+            --bg: #f5f5f5;
+            --white: #ffffff;
+            --shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Оптимизированный CSS */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
         }
+
         body {
-            background: #f5f5f5;
-            color: #333;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
         }
+
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* Шапка */
         .header {
-            background: #2c3e50;
-            color: white;
-            padding: 20px 0;
+            background: var(--primary);
+            color: var(--white);
+            padding: 30px 0;
             text-align: center;
         }
+
         .phone {
-            font-size: 32px;
-            font-weight: bold;
-            color: #ffd700;
-            margin: 10px 0;
+            font-size: clamp(24px, 5vw, 36px);
+            font-weight: 800;
+            color: var(--accent);
+            margin: 15px 0;
         }
-        .subtitle {
-            font-size: 18px;
-            color: #ecf0f1;
+
+        .phone a {
+            color: var(--accent);
+            text-decoration: none;
         }
+
+        .phone a:hover {
+            text-decoration: underline;
+        }
+
+        /* Навигация */
+        .nav {
+            background: #34495e;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 25px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .nav a:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .nav a.active {
+            background: var(--secondary);
+        }
+
+        /* Карточки */
         .section {
-            background: white;
-            margin: 20px 0;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: var(--white);
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
         }
+
+        h1 { font-size: clamp(28px, 5vw, 48px); }
+        h2 { 
+            font-size: clamp(24px, 4vw, 36px);
+            margin-bottom: 30px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+        }
+
+        /* Сетка преимуществ */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        /* Таблица цен */
         .price-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 30px 0;
         }
+
+        .price-table tr {
+            border-bottom: 2px solid #ecf0f1;
+        }
+
         .price-table td {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
+            padding: 20px 15px;
         }
-        .price-table tr:last-child td {
+
+        .price-table tr:last-child {
             border-bottom: none;
         }
-        .price {
-            font-weight: bold;
-            color: #27ae60;
-            font-size: 18px;
-        }
-        .button {
-            display: inline-block;
-            background: #27ae60;
-            color: white;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 5px;
+
+        .price-value {
+            color: var(--secondary);
+            font-weight: 800;
             font-size: 20px;
-            margin: 20px 0;
-            font-weight: bold;
+            text-align: right;
         }
-        .button:hover {
+
+        .service-desc {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 15px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .btn:hover {
             background: #219a52;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
         }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
+
+        .btn:active {
+            transform: translateY(0);
         }
-        .feature {
-            text-align: center;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 5px;
+
+        .btn-phone {
+            background: var(--primary);
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
         }
-        .feature h3 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+
+        .btn-phone:hover {
+            background: #1a252f;
         }
-        .footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-        .district-list {
+
+        /* Районы */
+        .districts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin: 20px 0;
+            gap: 15px;
+            margin: 25px 0;
         }
-        .district-item {
+
+        .district-tag {
             background: #ecf0f1;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 12px;
+            border-radius: 8px;
             text-align: center;
+            font-weight: 500;
         }
-        /* Стили для модального окна */
+
+        /* Форма */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background: var(--secondary);
+        }
+
+        .submit-btn:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+        }
+
+        /* Модальное окно */
         .modal {
             display: none;
             position: fixed;
@@ -119,20 +352,27 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0,0,0,0.7);
+            animation: fadeIn 0.3s;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         .modal-content {
-            background-color: white;
-            margin: 20% auto;
-            padding: 30px;
-            border-radius: 10px;
+            background-color: var(--white);
+            margin: 15% auto;
+            padding: 40px;
+            border-radius: 20px;
             width: 90%;
-            max-width: 400px;
+            max-width: 450px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            animation: slideDown 0.3s ease-out;
+            animation: slideIn 0.4s;
         }
-        @keyframes slideDown {
+
+        @keyframes slideIn {
             from {
                 transform: translateY(-100px);
                 opacity: 0;
@@ -142,203 +382,314 @@
                 opacity: 1;
             }
         }
-        .modal-content h2 {
-            color: #27ae60;
+
+        .modal-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            color: var(--secondary);
             margin-bottom: 15px;
-            font-size: 28px;
+            font-size: 32px;
         }
-        .modal-content p {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-        .modal-content .checkmark {
-            font-size: 60px;
-            color: #27ae60;
-            margin-bottom: 20px;
-        }
-        .modal-button {
-            background: #2c3e50;
-            color: white;
+
+        .modal-btn {
+            background: var(--primary);
+            color: var(--white);
             border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-size: 16px;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 18px;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 20px;
         }
-        .modal-button:hover {
-            background: #1a252f;
+
+        /* Футер */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
         }
-        @media (max-width: 600px) {
-            .phone {
-                font-size: 24px;
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .section { padding: 25px; }
+            .nav a { 
+                display: block;
+                margin: 5px 10px;
             }
-            .container {
-                padding: 10px;
+            .btn { 
+                display: block;
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
+    <header class="header">
         <div class="container">
             <h1>🚛 АССЕНИЗАТОР ВО ВЛАДИМИРЕ</h1>
-            <div class="phone">📞 +7 (999) 123-45-67</div>
-            <div class="subtitle">Круглосуточно • Без выходных • Приезд за 30 минут</div>
+            <div class="phone">
+                <a href="tel:+79991234567">📞 +7 (999) 123-45-67</a>
+            </div>
+            <p class="subtitle">✅ Круглосуточно • Без выходных • Приезд за 30 минут</p>
         </div>
-    </div>
+    </header>
 
-    <div class="container">
+    <nav class="nav" aria-label="Основная навигация">
+        <div class="container">
+            <a href="index.html" class="active">Главная</a>
+            <a href="#prices">Цены</a>
+            <a href="#districts">Районы</a>
+            <a href="#contact">Контакты</a>
+            <a href="tel:+79991234567">📞 Позвонить</a>
+        </div>
+    </nav>
+
+    <main class="container">
         <!-- Преимущества -->
-        <div class="section">
+        <section class="section" aria-label="Наши преимущества">
             <h2>Почему выбирают нас</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>⏰ 24/7</h3>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>24/7</h3>
                     <p>Работаем круглосуточно, включая праздники</p>
-                </div>
-                <div class="feature">
-                    <h3>⚡ Быстро</h3>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Быстро</h3>
                     <p>Приезжаем за 30-60 минут</p>
-                </div>
-                <div class="feature">
-                    <h3>🌿 Легально</h3>
-                    <p>Слив на очистных сооружениях</p>
-                </div>
-                <div class="feature">
-                    <h3>💰 Честно</h3>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Экологично</h3>
+                    <p>Официальный слив на очистных</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Честно</h3>
                     <p>Цена фиксированная, без доплат</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Контакты и форма (ТЕПЕРЬ ЗДЕСЬ) -->
+        <section class="section" id="contact" aria-label="Контакты и заявка">
+            <h2>📱 Свяжитесь с нами</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div>
+                    <p><strong>📞 Телефон:</strong> <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                    <p><strong>⏰ Режим работы:</strong> Круглосуточно, без выходных</p>
+                    <p><strong>📍 Адрес:</strong> г. Владимир, выезд по городу и области</p>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="tel:+79991234567" class="btn btn-phone">📞 ПОЗВОНИТЬ СЕЙЧАС</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="margin-bottom: 20px;">Быстрая заявка</h3>
+                    <form id="contactForm" action="https://formsubmit.co/smouk3214@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="box">
+                        
+                        <div class="form-group">
+                            <input type="text" 
+                                   name="name" 
+                                   class="form-control" 
+                                   placeholder="Ваше имя" 
+                                   required 
+                                   aria-label="Ваше имя">
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" 
+                                   name="phone" 
+                                   class="form-control" 
+                                   placeholder="Ваш телефон" 
+                                   required 
+                                   aria-label="Ваш телефон"
+                                   pattern="[0-9+\-\s\(\)]+"
+                                   title="Введите номер телефона">
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            Отправить заявку
+                        </button>
+                    </form>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Цены -->
-        <div class="section">
-            <h2>💰 Наши цены</h2>
+        <section class="section" id="prices" aria-label="Наши цены">
+            <h2>💰 Цены на услуги</h2>
+            
             <table class="price-table">
                 <tr>
-                    <td>Откачка септика (до 4 м³)</td>
-                    <td class="price">1 500 ₽</td>
+                    <td>
+                        <strong>Откачка септика</strong>
+                        <div class="service-desc">до 4 м³, частный сектор</div>
+                    </td>
+                    <td class="price-value">1 500 ₽</td>
                 </tr>
                 <tr>
-                    <td>Откачка выгребной ямы</td>
-                    <td class="price">1 800 ₽</td>
+                    <td>
+                        <strong>Откачка выгребной ямы</strong>
+                        <div class="service-desc">любой тип, включая старые ямы</div>
+                    </td>
+                    <td class="price-value">1 800 ₽</td>
                 </tr>
                 <tr>
-                    <td>Откачка дачного туалета</td>
-                    <td class="price">1 700 ₽</td>
+                    <td>
+                        <strong>Откачка дачного туалета</strong>
+                        <div class="service-desc">типовой уличный туалет</div>
+                    </td>
+                    <td class="price-value">1 700 ₽</td>
                 </tr>
                 <tr>
-                    <td>Прочистка труб гидродинамикой</td>
-                    <td class="price">от 2 000 ₽</td>
-                </tr>
-                <tr>
-                    <td>Аварийный вызов (ночью)</td>
-                    <td class="price">+500 ₽</td>
+                    <td>
+                        <strong>Гидродинамическая прочистка</strong>
+                        <div class="service-desc">удаление засоров, до 10 м</div>
+                    </td>
+                    <td class="price-value">от 2 000 ₽</td>
                 </tr>
             </table>
-            <p style="color: #666;">* Минимальный заказ — 1500 ₽</p>
-        </div>
+            
+            <p style="color: #666;">* Минимальный заказ — 1500 ₽. Для постоянных клиентов скидки.</p>
+        </section>
 
-        <!-- Фото машины -->
-        <div class="section" style="text-align: center;">
+        <!-- Фото техники -->
+        <section class="section" aria-label="Наша техника">
             <h2>🚛 Наша техника</h2>
-            <div style="background: #ddd; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #666;">
-                [ЗДЕСЬ БУДЕТ ФОТО ВАШЕЙ МАШИНЫ]
-            </div>
-            <p style="margin-top: 10px;">Иномарка / ГАЗ-3307 / Емкость 4 м³</p>
-        </div>
+            <figure style="text-align: center;">
+                <picture>
+                    <!-- Здесь можно добавить разные размеры фото для мобильных -->
+                    <img src="images/assennik-truck.jpg" 
+                         alt="Ассенизаторская машина во Владимире, иномарка, емкость 4 куба"
+                         style="max-width: 100%; border-radius: 15px; box-shadow: var(--shadow);"
+                         loading="lazy"
+                         width="800"
+                         height="450">
+                </picture>
+                <figcaption style="margin-top: 15px; color: #666;">
+                    Современная иномарка / ГАЗ-3307 • Емкость 4 м³ • Немецкий насос
+                </figcaption>
+            </figure>
+        </section>
 
         <!-- Зоны выезда -->
-        <div class="section">
+        <section class="section" id="districts" aria-label="Районы обслуживания">
             <h2>📍 Районы выезда</h2>
             <p>Работаем по всему Владимиру и пригороду:</p>
-            <div class="district-list">
-                <div class="district-item">Юрьевец</div>
-                <div class="district-item">Доброе</div>
-                <div class="district-item">Коммунар</div>
-                <div class="district-item">Оргтруд</div>
-                <div class="district-item">Энергетик</div>
-                <div class="district-item">Заклязьменский</div>
-                <div class="district-item">Улыбышево</div>
-                <div class="district-item">Суходол</div>
-                <div class="district-item">Спасское</div>
+            <div class="districts-grid">
+                <span class="district-tag">Юрьевец</span>
+                <span class="district-tag">Доброе</span>
+                <span class="district-tag">Коммунар</span>
+                <span class="district-tag">Оргтруд</span>
+                <span class="district-tag">Энергетик</span>
+                <span class="district-tag">Заклязьменский</span>
+                <span class="district-tag">Улыбышево</span>
+                <span class="district-tag">Суходол</span>
+                <span class="district-tag">Спасское</span>
+                <span class="district-tag">Мосино</span>
+                <span class="district-tag">Кусуново</span>
+                <span class="district-tag">Боголюбово</span>
             </div>
-        </div>
+        </section>
+    </main>
 
-        <!-- Кнопка звонка -->
-        <div style="text-align: center;">
-            <a href="tel:+79991234567" class="button">📞 ПОЗВОНИТЬ СЕЙЧАС</a>
-        </div>
-
-        <!-- Контакты и форма -->
-        <div class="section">
-            <h2>📱 Контакты</h2>
-            <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
-            <p><strong>WhatsApp:</strong> +7 (999) 123-45-67</p>
-            <p><strong>Режим работы:</strong> Круглосуточно, без выходных</p>
-            
-            <h3 style="margin-top: 20px;">Быстрая заявка</h3>
-            
-            <!-- ИЗМЕНЕНО: Добавлен data-атрибут для отслеживания отправки -->
-            <form id="contactForm" action="https://formsubmit.co/smouk3214@gmail.com" method="POST" style="margin-top: 15px;">
-                <input type="text" name="name" placeholder="Ваше имя" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;" required>
-                <input type="tel" name="phone" placeholder="Ваш телефон" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;" required>
-                
-                <!-- ДОБАВЛЕНО: Скрытое поле для редиректа -->
-                <input type="hidden" name="_next" value="https://smouk3214-gif.github.io/Assen/?success=true"> 
-                
-                <button type="submit" style="background: #2c3e50; color: white; padding: 15px; border: none; border-radius: 5px; width: 100%; font-size: 16px; cursor: pointer;">Отправить заявку</button>
-            </form>
-            <p style="font-size: 12px; color: #999; margin-top: 10px;">Нажимая кнопку, вы соглашаетесь на обработку данных</p>
-        </div>
-    </div>
-
-    <div class="footer">
+    <footer class="footer">
         <div class="container">
-            <p>© 2026 Ассенизатор во Владимире</p>
-            <p style="font-size: 14px; margin-top: 10px;">ИП Овчинников И.И. | ОГРН 1234567890123</p>
+            <p>© 2024 Ассенизатор во Владимире. Все права защищены.</p>
+            <p style="margin-top: 10px; font-size: 14px; opacity: 0.8;">
+                ИП Иванов И.И. | ИНН 123456789012 | ОГРН 1234567890123
+            </p>
+            <p style="margin-top: 20px; font-size: 13px; opacity: 0.6;">
+                <a href="#" style="color: white;">Политика конфиденциальности</a> | 
+                <a href="#" style="color: white;">Согласие на обработку данных</a>
+            </p>
         </div>
-    </div>
+    </footer>
 
-    <!-- ДОБАВЛЕНО: Модальное окно -->
-    <div id="successModal" class="modal">
+    <!-- Модальное окно -->
+    <div id="successModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
-            <div class="checkmark">✅</div>
-            <h2>Спасибо!</h2>
-            <p>Ваша заявка принята. Мы перезвоним вам в ближайшее время.</p>
-            <button class="modal-button" onclick="closeModal()">Закрыть</button>
+            <div class="modal-icon">✅</div>
+            <h3 id="modalTitle" class="modal-title">Спасибо!</h3>
+            <p style="margin-bottom: 20px;">Ваша заявка принята. Мы перезвоним вам в ближайшее время.</p>
+            <button class="modal-btn" onclick="closeModal()">Закрыть</button>
         </div>
     </div>
 
-    <!-- ДОБАВЛЕНО: JavaScript для модального окна -->
+    <!-- Оптимизированный JavaScript -->
     <script>
-        // Показываем модальное окно при загрузке страницы, если есть параметр success=true
-        window.addEventListener('load', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has('success') && urlParams.get('success') === 'true') {
-                showModal();
-                // Убираем параметр из URL, чтобы при обновлении страницы окно не появлялось снова
-                window.history.replaceState({}, document.title, window.location.pathname);
-            }
-        });
-
-        function showModal() {
-            document.getElementById('successModal').style.display = 'block';
-        }
-
-        function closeModal() {
-            document.getElementById('successModal').style.display = 'none';
-        }
-
-        // Закрытие по клику вне модального окна
-        window.onclick = function(event) {
+        (function() {
+            'use strict';
+            
+            const form = document.getElementById('contactForm');
             const modal = document.getElementById('successModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
+            const submitBtn = document.getElementById('submitBtn');
+
+            function showModal() {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Блокируем прокрутку
             }
-        }
+
+            window.closeModal = function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Возвращаем прокрутку
+            };
+
+            // Закрытие по клику вне окна
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            };
+
+            // Закрытие по Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    closeModal();
+                }
+            });
+
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Отправка...';
+                    
+                    try {
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form)
+                        });
+                        
+                        if (response.ok) {
+                            showModal();
+                            form.reset();
+                        } else {
+                            throw new Error('Ошибка сервера');
+                        }
+                    } catch (error) {
+                        alert('Ошибка отправки. Пожалуйста, позвоните нам: +7 (999) 123-45-67');
+                        console.error('Error:', error);
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Отправить заявку';
+                    }
+                });
+            }
+        })();
     </script>
 </body>
 </html>
